@@ -11,8 +11,8 @@ Kleine Sammlung an C++11 Programmen, jeweils mit Makefile.
 
 * Jeweils im Projectordner mit ```make``` builden und mit ```make run``` ausführen
 
-
-z.B. ```
+**Beispiel:**
+```
     $ cd lambda
     $ make
     $ make run
