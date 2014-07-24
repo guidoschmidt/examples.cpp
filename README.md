@@ -6,3 +6,14 @@ Kleine Sammlung an C++11 Programmen, jeweils mit Makefile.
 * ```lambda``` erklärt Closures (Lambda-Funktionen)
 * ```tostring``` zeigt die neue ```to_string()```-Methode
 * ```sharedptr``` erklärt Shared Pointer
+
+## Verwendung
+
+* Jeweils im Projectordner mit ```make``` builden und mit ```make run``` ausführen
+
+
+z.B. ```
+    $ cd lambda
+    $ make
+    $ make run
+```
