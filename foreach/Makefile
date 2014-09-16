@@ -1,6 +1,9 @@
 all:
 	g++ -std=c++11 foreach.cpp -o bin/foreach
 
+clang:
+	clang++ -std=c++11 foreach.cpp -o bin/foreach
+
 run:
 	./bin/foreach
 
