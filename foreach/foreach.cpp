@@ -2,7 +2,7 @@
 
 int main()
 {
-	std::cout << "C++ 11 for-each-loops" << std::endl;
+	std::cout << "--- C++ 11 for-each-loops ---" << std::endl;
 
 	int array[] = {1, 2, 3, 4};
 
