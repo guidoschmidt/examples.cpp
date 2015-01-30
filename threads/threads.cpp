@@ -7,7 +7,7 @@ using namespace std;
 void foo()
 {
 	cout << "I will pint 'foo' 20 times";
-	for(int i=0; i < 20; i++)
+	for(int i=0; i < 200; i++)
 		cout << "foo" << endl;
 }
 
@@ -23,7 +23,7 @@ int main(int argc, char* agrv[])
 	cout << "--- Threads ---" << endl;
 
 	thread fooThread(foo);
-	thread barThread(bar, 6, "#yolo");
+	thread barThread(bar, 600, "#yolo");
 
 	fooThread.join();
 	barThread.join();

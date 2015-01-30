@@ -19,6 +19,8 @@ int main()
     cout << "C++ 11 Shared Pointer" << endl;
     cout << "---------------------" << endl;
 
+    int o = nullptr;
+
     int aNumber = 5;
 
     int *int_ptr_one = &aNumber;
