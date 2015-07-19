@@ -8,7 +8,7 @@ bin:
 	mkdir bin
 
 clang: bin
-	clang++ -std=c++11 $(name).cpp -o bin/$(name)
+	clang++ -std=c++11 $(name).cpp $(classes) -o bin/$(name)
 
 run:
 	./bin/$(name)
