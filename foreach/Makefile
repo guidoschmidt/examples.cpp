@@ -1,11 +1,17 @@
-all:
-	g++ -std=c++11 foreach.cpp -o bin/foreach
+name = foreach
 
-clang:
-	clang++ -std=c++11 foreach.cpp -o bin/foreach
+all: bin
+	g++ -std=c++11 $(name).cpp -o bin/$(name)
+
+bin:
+	mkdir bin
+
+clang: bin
+	clang++ -std=c++11 $(name).cpp -o bin/$(name)
 
 run:
-	./bin/foreach
+	./bin/$(name)
 
 clean:
 	rm bin/*
+	rm -r bin/
