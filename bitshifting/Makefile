@@ -14,3 +14,4 @@ run:
 
 clean:
 	rm bin/*
+	rm -r bin/
