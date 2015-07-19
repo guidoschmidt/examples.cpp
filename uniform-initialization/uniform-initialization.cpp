@@ -24,6 +24,7 @@
 #include <string>
 
 // Define an aggregate 'class'
+// The order of the properties matches the initialization order
 struct A_is_Struct {
   int    x;
   double y;
