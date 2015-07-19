@@ -1,5 +1,18 @@
-all:
-	clang++ --std=c++0x *.cpp -o bin/friend
+name = friend
+classes = Menu.cpp
+
+all: bin
+	g++ -std=c++11 $(name).cpp $(classes)  -o bin/$(name)
+
+bin:
+	mkdir bin
+
+clang: bin
+	clang++ -std=c++11 $(name).cpp -o bin/$(name)
 
 run:
-	./bin/friend
+	./bin/$(name)
+
+clean:
+	rm bin/*
+	rm -r bin/
