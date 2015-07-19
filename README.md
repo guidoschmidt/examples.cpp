@@ -1,19 +1,18 @@
 # C++11 Examples
 
-Kleine Sammlung an C++11 Programmen, jeweils mit Makefile.
+Collection of C++ examples to explain concepts, patterns and data structures.
 
-* ```foreach``` erklärt die neue For-Each-Loop-Syntax
-* ```lambda``` erklärt Closures (Lambda-Funktionen)
-* ```tostring``` zeigt die neue ```to_string()```-Methode
-* ```sharedptr``` erklärt Shared Pointer
+## Usage
+`cd` into an example folder and build it with `make`. Then run it using `make run`.
 
-## Verwendung
-
-* Jeweils im Projectordner mit ```make``` builden und mit ```make run``` ausführen
-
-**Beispiel:**
+**Example:**
 ```
     $ cd lambda
     $ make
     $ make run
 ```
+
+## Additional commands
+
+- `make clean` Removes binaries
+- `make clang` Build the example with clang++ compiler
