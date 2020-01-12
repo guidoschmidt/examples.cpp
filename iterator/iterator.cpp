@@ -1,29 +1,35 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
-
-int main(int argc, char* argv[])
+int main()
 {
-	cout << "--- Iterator ---" << endl;
-	int fibonacciArray[] = {1, 1, 2, 3, 5, 8, 13};
-	auto arraySize = fibonacciArray + sizeof(fibonacciArray)/sizeof(int);
-	vector<int> fibonacciVector(fibonacciArray, arraySize);
+	int fibonacciArray[] = { 1, 2, 3, 5, 8, 13 };
+	auto arraySize = fibonacciArray + sizeof(fibonacciArray) / sizeof(int);
+  std::vector<int> fibonacci(fibonacciArray, arraySize);
 
-	cout << "Using for each:" << endl;
-	for(auto i : fibonacciVector)
+	std::cout << "Using for each:" << std::endl;
+	for(auto i : fibonacci)
 	{
-		cout << i << ", ";
+		std::cout << i << ", ";
 	}
 
-	cout << "\nUsing iterator:" << endl;
-	for(auto it = fibonacciVector.begin(); it < fibonacciVector.end(); ++it) 
+	std::cout << "\nUsing iterator:" << std::endl;
+	for(auto it = fibonacci.begin(); it != fibonacci.end(); ++it) 
 	{
-		cout << *it;
-		if((it + 1) != fibonacciVector.end())
-			cout << ", ";
+    // Adding elements while iterating over the std::vector
+    if (it == fibonacci.begin())
+      it = fibonacci.insert(it, 1);
+    std::cout << *it << ", ";
 	}
-	cout << endl;
+	std::cout << std::endl;
+
+  for (auto it = fibonacci.begin(); it != fibonacci.end(); ++it) {
+    // Removing elements while iterating over the std::vector
+    if (it == fibonacci.begin() + 2)
+      it = fibonacci.erase(it);
+    std::cout << *it << ", ";
+  }
+  std::cout << std::endl;
 
 	return 0;
 }

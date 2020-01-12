@@ -10,6 +10,10 @@ template<typename T> void copyTogether(const T& a, const T& b)
 	cout << c << endl;
 }
 
+template<typename T> T returnArg(const T& input)
+{
+  return input;
+}
 
 int main(int argc, char* argv[])
 {
@@ -30,6 +34,13 @@ int main(int argc, char* argv[])
 	string astring = "Ein";
 	string bstring = "String";
 	copyTogether(astring, bstring);
+
+  int intArg = 12;
+  cout << returnArg(intArg) << endl;
+  string stringArg = "Foobar";
+  cout << returnArg(stringArg) << endl;
+  float floatArg = 32823902.323f;
+  cout << returnArg(floatArg) << endl;
 
 	return 0;
 }

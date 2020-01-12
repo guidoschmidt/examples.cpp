@@ -12,8 +12,7 @@ void Listener::listenEvent(Event* e)
 
 void Listener::unlistenEvent(Event* e)
 {
-	auto resultIterator = std::find(_eventsToListenTo.begin(),
-									_eventsToListenTo.end(),
-									e);
-	_eventsToListenTo.erase(resultIterator);
+  auto resultIterator =
+      std::find(_eventsToListenTo.begin(), _eventsToListenTo.end(), e);
+  _eventsToListenTo.erase(resultIterator);
 }
