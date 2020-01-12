@@ -20,4 +20,6 @@ int main() {
   std::fill(myVector.begin() + 2, myVector.end() - 4, 9);
   // [5, 5, 9, 9, 1, 1, 1, 1]
   printVector(myVector);
+
+  return 0;
 }
