@@ -16,3 +16,7 @@ Collection of C++ examples to explain concepts, patterns and data structures.
 
 - `make clean` Removes binaries
 - `make clang` Build the example with clang++ compiler
+
+
+- `make name=find build`
+- `make name=find run`
