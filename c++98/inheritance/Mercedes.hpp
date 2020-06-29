@@ -7,7 +7,7 @@
 class Mercedes : public Car
 {
 	public:
-		inline std::string getType() { return "Mercedes"; }
+		inline virtual std::string getType() { return "Mercedes"; }
 };
 
 

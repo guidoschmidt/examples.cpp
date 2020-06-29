@@ -18,9 +18,17 @@ int main(int argc, char* argv[])
 	myCars.push_back(myMercedes);
 
 	std::cout << "I have ..." << std::endl;
-	for(auto car : myCars)
+	for(std::vector<Car*>::iterator it = myCars.begin(); it < myCars.end(); it++)
 	{
-		std::cout << "... a " << car->getType() << std::endl;
+    if (dynamic_cast<Ford*>(*it)) {
+      std::cout << "... a " << dynamic_cast<Ford*>(*it)->getType() << std::endl;
+    }
+    if (dynamic_cast<Mercedes*>(*it)) {
+      std::cout << "... a " << dynamic_cast<Mercedes*>(*it)->getType() << std::endl;
+    }
+    // if (dynamic_cast<Mercedes*>(*it)) {
+    //   std::cout << "... a " << dynamic_cast<Mercedes*>(*it)->getType() << std::endl;
+    // }
 	}
 
 	return 0;

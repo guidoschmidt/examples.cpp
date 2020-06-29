@@ -7,7 +7,7 @@ class Car
 {
 	private:
 	public:
-		inline std::string getType(){ return "Car"; };
+		inline virtual std::string getType(){ return "Car"; };
 };
 
 #endif // H_CAR

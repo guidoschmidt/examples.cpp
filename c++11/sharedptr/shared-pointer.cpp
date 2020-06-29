@@ -12,14 +12,10 @@ bool checkSharePointer(shared_ptr<int> p)
 		return false;
 }
 
-
-
 int main()
 {
     cout << "C++ 11 Shared Pointer" << endl;
     cout << "---------------------" << endl;
-
-    int o = nullptr;
 
     int aNumber = 5;
 
@@ -37,10 +33,6 @@ int main()
     {
     	cout << "Now int_ptr_two has a value of " << *int_ptr_two << endl;
     }
-
-    auto_ptr<int> auto_ptr_one(new int);
-    *auto_ptr_one.get() = aNumber;
-    cout << "My first auto_ptr has the value of " << *auto_ptr_one << endl;
 
     shared_ptr<int> shared_ptr_one(new int);
     *shared_ptr_one.get() = aNumber;
@@ -60,7 +52,6 @@ int main()
     // Evaluate share pointer count
     cout << "Currently there are " << shared_ptr_three.use_count()
     	 << " shared ptr on object aNumber" << endl;
-
 
     // Delete sth with a callnback lambda function
     shared_ptr<int> shared_ptr_four(new int, [](int* p){ delete p; } );

@@ -9,7 +9,7 @@ class Ford : public Car
 {
 	private:
 	public:
-		std::string getType();
+		virtual std::string getType();
 };
 
 #endif // H_FORD

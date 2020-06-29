@@ -70,6 +70,10 @@ vector<string> findElementsContaing(const string& searchString, Field & inField)
 		);
 }
 
+void lambda_as_argument(void (*fn)()) {
+  fn();
+}
+
 //--- Main ---------------------------------------------------------------------
 int main()
 {
@@ -101,6 +105,10 @@ int main()
 	{
 		cout << "	" << r << endl;
 	}
+
+  lambda_as_argument([] () {
+    std::cout << "Hello from el closure..." << std::endl;
+  });
 
 	return 0;
 }

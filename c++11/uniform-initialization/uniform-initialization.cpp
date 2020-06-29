@@ -37,10 +37,10 @@ class B_is_Class {
     double y;
 
   public:
-    B_is_Class(int xIn, double yIn) : x(xIn), y(yIn)
-    {
+    B_is_Class(int xIn, double yIn) : x(xIn), y(yIn ) {};
 
-    };
+    int X() const { return x; }
+    double Y() const { return y; }
 };
 
 int main()
@@ -86,6 +86,9 @@ int main()
   // New style, C++11
   A_is_Struct objectA0_new{};
   A_is_Struct objectA1_new{1, 1.0};
+
+  std::cout << "A1.x: " << objectA1_new.x << std::endl;
+  std::cout << "A1.y: " << objectA1_new.y << std::endl;
   
   // Initialize a custom class
   // Old style, C++98
@@ -93,6 +96,8 @@ int main()
   // New style, C++11
   B_is_Class objectB1_new{2, 5.0};
 
+  std::cout << "B1.x: " << objectB1_new.X() << std::endl;
+  std::cout << "B1.y: " << objectB1_new.Y() << std::endl;
 
   return 0;
 }
