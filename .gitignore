@@ -1,3 +1,4 @@
 # bin folders for compilations
 */bin/
+**/*/bin
 .ccls-cache/
